@@ -1,0 +1,10 @@
+Команды сборки:
+# разовая сборка
+npx @tailwindcss/cli -i ./src/web/static/css/input.css -o ./src/web/static/css/app.css
+
+# в watch-режиме (для разработки)
+npx @tailwindcss/cli -i ./src/web/static/css/input.css -o ./src/web/static/css/app.css --watch
+
+# минифицированная сборка (для продакшена)
+npx @tailwindcss/cli -i ./src/web/static/css/input.css -o ./src/web/static/css/app.css --minify
+В шаблоне подключаете собранный output.css:

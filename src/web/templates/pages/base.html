@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/includes/header.css') }}">
+    <title>{% block title %}Приложение{% endblock %}</title>
+
+    <script
+        src="{{ url_for('static', path='js/htmx.js') }}"
+    >
+    </script>
+</head>
+<body class="">
+    {% include 'includes/header.html' %}
+    <main class="">
+        {% block content %}{% endblock %}
+    </main>
+    {% include 'includes/footer.html' %}
+</body>
+</html>
